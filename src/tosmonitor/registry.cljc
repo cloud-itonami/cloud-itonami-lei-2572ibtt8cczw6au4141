@@ -22,9 +22,13 @@
 ;; ----------------------------- doc-type vocabulary -----------------------------
 
 (def known-doc-types
-  "Matches the archive's own :tos/doc-type vocabulary
-  (80-data/public/tos.journal.edn, ADR-2607110300)."
-  #{:terms-of-service :privacy-policy :cookie-policy :acceptable-use :other-legal})
+  "Matches the archive family's OWN observed :tos/doc-type vocabulary
+  (surveyed across all 155 `cloud-itonami-lei-*` `80-data/public/
+  tos.journal.edn` files, ADR-2607110300; not invented/guessed values)."
+  #{:terms-of-service :privacy-policy :terms-of-use :legal-notice
+    :terms-of-carriage :terms-and-conditions :legal-disclaimer
+    :vendor-terms-and-conditions :risk-disclosures :policies-and-guidelines
+    :legal-hub :contract-of-carriage})
 
 ;; ----------------------------- ground-truth SHA-256 -----------------------------
 
