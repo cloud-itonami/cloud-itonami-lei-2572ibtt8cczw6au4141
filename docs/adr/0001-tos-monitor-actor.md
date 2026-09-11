@@ -63,7 +63,7 @@ is worth extending to the `cloud-itonami-lei-*` family.
      re-verified from the store, never the advisor's self-report. Guards
      the risk specific to an LEI-keyed independent-archive family:
      misattributing a document to the wrong company.
-5. **Mock-advisor only.** `clojure -M:dev:run` and the test suite never
+5. **Mock-advisor only.** `kbb -M:dev:run` and the test suite never
    make a live network call. `tosmonitor.advisor/llm-advisor` exists as a
    written, swappable seam but is not invoked anywhere in this pilot.
 
@@ -85,9 +85,9 @@ is worth extending to the `cloud-itonami-lei-*` family.
 ## Run
 
 ```bash
-clojure -M:dev:run     # walk a clean lifecycle + all six HARD-hold checks + a phase-0 hold + a backend swap
-clojure -M:dev:test    # governor contract · phase invariants · store parity · advisor smoke
-clojure -M:lint        # clj-kondo (errors fail; CI mirrors this)
+kbb -M:dev:run     # walk a clean lifecycle + all six HARD-hold checks + a phase-0 hold + a backend swap
+kbb -M:dev:test    # governor contract · phase invariants · store parity · advisor smoke
+kbb -M:lint        # clj-kondo (errors fail; CI mirrors this)
 ```
 
 ## Alternatives considered
